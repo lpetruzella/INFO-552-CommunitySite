@@ -13,6 +13,11 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --blue: #0081A7;
+  --teal: #00AFB9
+  --yellow: #FDFCDC
+  --peach: #FED9B7
+  --lightRed: #F07167 ;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
