@@ -364,7 +364,70 @@ textarea {
 
 /* =============
     Navigation
+============= */ /* =============
+    Navigation
 ============= */
+.bold-link {
+  font-weight: 600;
+}
+
+.darkGreenLink:link, .darkGreenLink:visited {
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.darkGreenLink:hover, .darkGreenLink:active {
+  color: var(--pink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+nav {
+  background: teal;
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav {
+    display: block;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 24px 0;
+    border-bottom: 2px solid var(--pink);
+  }
+}
+nav ul li {
+  padding: 0 0 24px 24px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  nav ul li {
+    padding: 0;
+  }
+}
+nav ul li a:link, nav ul li a:visited {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
 /* =============
     Header
 ============= */
@@ -407,7 +470,7 @@ header #burger-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--pink);
+  background-color: var(--lightRed);
   padding: 16px 0;
 }
 @media (min-width: 1024px) {
@@ -437,7 +500,7 @@ header a:link, header a:visited {
   letter-spacing: 0.125rem;
 }
 header a:hover, header a:active {
-  color: var(--pink);
+  color: var(--yellow);
 }
 header p {
   font-size: 0.875rem;

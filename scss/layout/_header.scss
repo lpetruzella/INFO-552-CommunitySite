@@ -12,7 +12,7 @@ header{
     "burger"
     "nav";
     padding: 16px;
-    position: fixed;
+    position: relative;
     width: 100%;
     background: white;   
     box-sizing: border-box;
@@ -32,7 +32,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--pink);
+        background-color: var(--lightRed);
         padding: 16px 0;
         
 
@@ -67,7 +67,7 @@ header{
     }
 
     a:hover, a:active{
-        color: var(--pink);
+        color: var(--yellow);
     }
 
     p{
