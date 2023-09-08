@@ -336,9 +336,106 @@ template {
 /* =============
     Base
 ============= */
+body {
+  background: teal;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.content-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". content .";
+}
+@media (min-width: 1200px) {
+  .content-grid {
+    -ms-grid-columns: auto 1200px auto;
+    grid-template-columns: auto 1200px auto;
+  }
+}
+.content-grid .content-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  background-color: var(--white);
+  grid-area: content;
+}
+
+#main-content-grid {
+  margin-top: 220px;
+}
+@media (min-width: 1024px) {
+  #main-content-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 16px auto;
+    grid-template-columns: 60% auto;
+    gap: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  #main-content-grid {
+    -ms-grid-columns: 70% auto;
+    grid-template-columns: 70% auto;
+  }
+}
+@media (min-width: 1440px) {
+  #main-content-grid {
+    -ms-grid-columns: 75% auto;
+    grid-template-columns: 75% auto;
+  }
+}
+
+#main-content-right {
+  border: 1px solid var(--gray);
+  margin: 150px 16px 16px;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+#main-content-right #map-pic {
+  background-image: url("../img/festival map.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  border-radius: 100%;
+  height: 200px;
+  margin: -65px auto 0;
+}
+#main-content-right h2 {
+  padding-bottom: 16px;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+}
+#main-content-right p {
+  line-height: 1.5;
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -372,13 +469,13 @@ textarea {
 }
 
 .darkGreenLink:link, .darkGreenLink:visited {
-  color: var(--blue);
+  color: var(--lightRed);
   text-decoration: none;
   display: inline-block;
 }
 
 .darkGreenLink:hover, .darkGreenLink:active {
-  color: var(--pink);
+  color: peach;
 }
 
 html {
@@ -390,7 +487,7 @@ html {
 }
 
 nav {
-  background: teal;
+  background: lightRed;
   display: none;
 }
 @media (min-width: 1024px) {
@@ -412,7 +509,7 @@ nav {
             align-items: center;
     width: 100%;
     padding: 24px 0;
-    border-bottom: 2px solid var(--pink);
+    border-bottom: 2px solid var(--peach);
   }
 }
 nav ul li {
@@ -440,7 +537,7 @@ header {
   display: grid;
       grid-template-areas: "burger" "nav";
   padding: 16px;
-  position: fixed;
+  position: relative;
   width: 100%;
   background: white;
   -webkit-box-sizing: border-box;
@@ -525,3 +622,82 @@ header nav {
 /* =============
     Footer
 ============= */
+#index-left {
+  padding: 0 16px;
+}
+#index-left h1 {
+  padding-bottom: 24px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.125rem;
+}
+#index-left #index-quote {
+  padding-left: 16px;
+  font-style: italic;
+  border-left: 2px var(--pink) solid;
+  padding-bottom: 0px;
+  padding: 5px 0 5px 10px;
+  margin-bottom: 24px;
+}
+#index-left p {
+  padding-bottom: 24px;
+  line-height: 1.5;
+}
+#index-left #form-left {
+  padding: 0 16px;
+}
+#index-left #form-left h2 {
+  padding-bottom: 24px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+#index-left #form-left #form-quote {
+  padding-left: 16px;
+  font-style: italic;
+  border-left: 2px var(--pink) solid;
+  padding-bottom: 0px;
+  padding: 5px 0 5px 10px;
+  margin-bottom: 24px;
+}
+#index-left #form-left p {
+  padding-bottom: 24px;
+  line-height: 1.5;
+}
+#index-left input[type=text], #index-left select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#index-left input[type=submit] {
+  width: 100%;
+  background-color: teal;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#index-left input[type=submit]:hover {
+  background-color: teal;
+}
+#index-left div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#deals-left {
+  padding: 16px;
+}
+#deals-left h1 {
+  padding-bottom: 24px;
+}

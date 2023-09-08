@@ -12,9 +12,9 @@ header{
     "burger"
     "nav";
     padding: 16px;
-    position: relative;
+    position: fixed;
     width: 100%;
-    background: white;   
+    background: peachpuff;   
     box-sizing: border-box;
     box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
     top: 0;
@@ -25,6 +25,16 @@ header{
     @include lg{
         grid-template-areas: "nav";
         padding-bottom: 0;
+    }
+
+    #logo{
+        grid-area: logo;
+        display: flex;
+        align-items:center;
+
+        img{
+            width: 50px;
+        }
     }
 
     #burger-container{

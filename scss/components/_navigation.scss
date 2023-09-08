@@ -10,7 +10,7 @@
 // dark blue / light blue link
  // love // hate
  .darkGreenLink:link, .darkGreenLink:visited{
-    color: var(--blue);
+    color: var(--lightRed);
     text-decoration: none;
     display: inline-block;
 }
@@ -29,7 +29,7 @@ html{
 }
 
 nav{
-    background: teal;
+    background: lightRed;
     display: none;
 
     @include lg{
@@ -45,7 +45,7 @@ nav{
             align-items: center;
             width: 100%;
             padding: 24px 0;
-            border-bottom: 2px solid var(--pink);
+            border-bottom: 2px solid var(--peach);
         }
 
         li{
@@ -61,8 +61,6 @@ nav{
                 font-weight: 400;
 
                 &:hover, &:active{
-
-
                 }
             }
             
